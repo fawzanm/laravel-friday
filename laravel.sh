@@ -1,7 +1,7 @@
 #!/bin/bash
 
 SHOULD_DELETE=0
-PROJECT_PATH="/etc/cache"
+PROJECT_PATH="$HOME/Projects"
 OTHER_ARGUMENTS=()
 
 # Loop through arguments and process them
@@ -26,9 +26,6 @@ done
 
 #Last argument is stored in PROJECT_NAME
 for PROJECT_NAME in $OTHER_ARGUMENTS; do :; done
-
-#@TODO PROJECT_PATH is set to ~/Projects by default
-PROJECT_PATH="$HOME/Projects"
 
 #if -d flag is set, then we delete the project and quit
 if [ "$SHOULD_DELETE" == "1" ] ;then
